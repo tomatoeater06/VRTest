@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>A-Frame VR Test</title>
+
+    <!-- A-Frame -->
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+<a-scene>
+
+    <!-- 360°画像 -->
+    <a-sky src="panorama.png"
+           rotation="0 -90 0">
+    </a-sky>
+
+    <!-- カメラ -->
+    <a-entity camera
+              look-controls
+              position="0 1.6 0">
+    </a-entity>
+
+</a-scene>
+
+</body>
+</html>
