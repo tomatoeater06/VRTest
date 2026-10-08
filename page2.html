@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>A-Frame VR - 画像2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- A-Frame -->
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+
+    <!-- 共通UIスタイル -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a-scene>
+    <!-- 360°画像（このページの画像） -->
+    <a-sky src="test2.png" rotation="0 -90 0"></a-sky>
+
+    <!-- カメラ -->
+    <a-entity camera look-controls position="0 1.6 0"></a-entity>
+</a-scene>
+
+<!-- ページ番号 -->
+<div class="ui page-no">2 / 3</div>
+
+<!-- 左右の矢印（ページ移動） -->
+<a class="ui arrow arrow-left"  href="page1.html" aria-label="前のページ">&#10094;</a>
+<a class="ui arrow arrow-right" href="page3.html" aria-label="次のページ">&#10095;</a>
+
+<!-- i ボタン -->
+<button class="ui info-btn" id="infoBtn" aria-label="情報を表示">i</button>
+
+<!-- 情報パネル -->
+<div class="ui info-panel" id="infoPanel" hidden>
+    <button class="close-btn" id="closeBtn" aria-label="閉じる">&times;</button>
+    <h2>画像2のタイトル</h2>
+    <p>ここに画像2の説明文を書きます。撮影場所や見どころなどを記載してください。</p>
+</div>
+
+<script>
+    const infoBtn   = document.getElementById('infoBtn');
+    const infoPanel = document.getElementById('infoPanel');
+    const closeBtn  = document.getElementById('closeBtn');
+
+    // i ボタンで表示 / バツボタンで閉じる
+    infoBtn.addEventListener('click', () => { infoPanel.hidden = false; });
+    closeBtn.addEventListener('click', () => { infoPanel.hidden = true; });
+</script>
+
+</body>
+</html>
